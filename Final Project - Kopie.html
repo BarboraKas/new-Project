@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIKE RENTAL</title>
+    <style>
+      body {
+        background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+      }
+      h1 {
+        text-align: center;
+        font-size: 35px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        margin-bottom: 5px;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 29px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        padding: 15px 15px 0 15px;
+        margin: 5px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 70%;
+        border-radius: 5px;
+        border: 3px solid;
+        border-color: #502e10;
+      }
+
+      hr {
+        width: 70%;
+        opacity: 0.7;
+        border-color: black;
+      }
+
+      p {
+        line-height: 1.7em;
+        font-size: 17px;
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+      }
+
+      button {
+        display: block;
+        margin: 5px auto;
+        font-size: 20px;
+        border-radius: 5px;
+        color: #502e10;
+        background-color: rgb(226, 102, 68);
+        padding: 10px 15px;
+        border: none;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+
+      span {
+        font-weight: bold;
+      }
+
+      .bike {
+        display: block;
+        margin: 10px auto;
+        text-decoration: none;
+        transition: all 200ms ease-in-out;
+        color: #c3122e;
+      }
+      .bike:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      .built {
+        text-align: right;
+        font-size: 12px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        padding: 10px;
+      }
+      .house {
+        margin: 0 auto;
+        padding: 10px 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="house">
+      <h1>bike rental</h1>
+      <h2><em>For all who want to stay fit </em></h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/017/286/original/Fahrrad-p-500.jpeg?1631867390"
+        alt="Fahrrad"
+      />
+
+      <p>
+        Health is certainly not everything, but without
+        <span> health </span> everything is nothing" Arthur Schopenhauer already
+        knew. Unfortunately, in our modern lives we often neglect the factors
+        that can contribute to a healthy and long life. In addition to a
+        <span> balanced </span> diet, exercise in the fresh air is often
+        neglected. You don't have to attend an expensive sports course to fight
+        the everyday lack of <span> exercise </span>. Instead, how about
+        rediscovering the bicycle as a practical and
+        <span> environmentally </span> friendly means of transport that will
+        also help you get fitter and slimmer? <br />
+
+        <a
+          href="https://www.bikeradar.com/features/9-reasons-why-bike-commuting-is-better-than-driving/"
+          target="blank"
+          class="bike"
+        >
+          More interesting information about bike ride
+        </a>
+      </p>
+      <button><strong> Rent a bike </strong></button>
+      <p class="built">This page was built by Barbora Kasmanova</p>
+    </div>
+
+    <script>
+      function rentBike() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email Adress?");
+        let day = prompt("On which day do you want to borrow a bike?");
+        day = day.toLowerCase();
+        day = day.trim();
+        if (day === "monday") {
+          alert("😥Sorry " + name + ",but we are closed on Monday.");
+        } else {
+          alert("😊Hi " + name + ",we are glad that you have chosen us.");
+        }
+      }
+      let bikeButton = document.querySelector("button");
+      bikeButton.addEventListener("click", rentBike);
+    </script>
+  </body>
+</html>
